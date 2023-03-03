@@ -12,6 +12,11 @@ namespace Heist
 
             Console.WriteLine("Plan your Heist!");
 
+            Console.WriteLine(@"What is the bank's difficulty level? (1, 2, or 3)
+1: Easy
+2: Medium
+3: Hard");
+            int ChosenLevel = int.Parse(Console.ReadLine());
         another:
             Console.WriteLine("Enter your team member's name.");
             string name = Console.ReadLine();
@@ -38,7 +43,7 @@ namespace Heist
             }
             Console.WriteLine("");
             Console.WriteLine("-------------");
-                Retry:
+        Retry:
             Console.WriteLine("How many times yall wanna try this? (1-5)");
 
             int TrialRuns = int.Parse(Console.ReadLine());
@@ -52,6 +57,9 @@ Courage Factor: {crewMem.Courage}");
                 Console.WriteLine("-------------");
             }
 
+            int Successes = 0;
+            int Failures = 0;
+
             while (TrialRuns > 0)
             {
                 Random r = new Random();
@@ -60,30 +68,52 @@ Courage Factor: {crewMem.Courage}");
                 int BankSecurity = 100;
                 BankSecurity += Luck;
 
+                if (ChosenLevel == 1)
+                {
+                    BankSecurity += 0;
+                }
+                else if (ChosenLevel == 2)
+                {
+                    BankSecurity += 100;
+                }
+                else
+                {
+                    BankSecurity += 150;
+                }
+
                 int CrewSkill = 0;
                 foreach (var crewMem in HeistCrew)
                 {
                     CrewSkill += crewMem.SkillLevel;
                 }
                 Console.WriteLine($"The bank's security is {BankSecurity}, and your crew has {CrewSkill} skill.");
+
                 if (CrewSkill > BankSecurity)
                 {
                     Console.WriteLine("The Heist was a success! You made a clean getaway.");
-                    TrialRuns --;
+                    TrialRuns--;
+                    Successes += 1;
                 }
                 else
                 {
                     Console.WriteLine($"{HeistCrew[0].Name} tripped the alarm! You were all arrested.");
-                    TrialRuns --;
+                    TrialRuns--;
+                    Failures += 1;
                 }
             }
 
             Console.WriteLine("--------------");
+            Console.WriteLine(@$"Yall had {Successes} successful robberies and
+{Failures} Failed robberies.");
             Console.WriteLine("Do you wanna try again? (yes/no)");
             string SendIt = Console.ReadLine().ToLower();
             if (SendIt == "yes")
             {
                 goto Retry;
+            }
+            else
+            {
+                Console.WriteLine(@$"Your squad is whack.");
             }
         }
     }
