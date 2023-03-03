@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AFdev\\workspace\\heist\\heist\\Heist.csproj": {}
+    "C:\\Users\\AFdev\\workspace\\Heist\\heist\\Heist.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AFdev\\workspace\\heist\\heist\\Heist.csproj": {
+    "C:\\Users\\AFdev\\workspace\\Heist\\heist\\Heist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AFdev\\workspace\\heist\\heist\\Heist.csproj",
+        "projectUniqueName": "C:\\Users\\AFdev\\workspace\\Heist\\heist\\Heist.csproj",
         "projectName": "Heist",
-        "projectPath": "C:\\Users\\AFdev\\workspace\\heist\\heist\\Heist.csproj",
+        "projectPath": "C:\\Users\\AFdev\\workspace\\Heist\\heist\\Heist.csproj",
         "packagesPath": "C:\\Users\\AFdev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AFdev\\workspace\\heist\\heist\\obj\\",
+        "outputPath": "C:\\Users\\AFdev\\workspace\\Heist\\heist\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AFdev\\AppData\\Roaming\\NuGet\\NuGet.Config",

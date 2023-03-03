@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o/hsPOvUhS05vqMliMxN6PUNVCpdxxXUAcXb/ZgEIkTTBHv/rYaCbyY2jCCcyATN+GUypM7Ge4aH6+vg1FMEHQ==",
+  "dgSpecHash": "gBc+ZCs6xDPH+FGgH+Cwytel1udkuqpXZgpPAW2oCfaRWY/vFZ7bCCC/RvL0CzgxxR6g3C9RIZx+w3UMzqPqhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AFdev\\workspace\\heist\\heist\\Heist.csproj",
+  "projectFilePath": "C:\\Users\\AFdev\\workspace\\Heist\\heist\\Heist.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
