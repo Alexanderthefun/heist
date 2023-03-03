@@ -44,6 +44,19 @@ Skill Level: {crewMem.SkillLevel},
 Courage Factor: {crewMem.Courage}");
                 Console.WriteLine("-------------");
             }
+            int BankSecurity = 100;
+            int CrewSkill = 0;
+            foreach (var crewMem in HeistCrew)
+            {
+                CrewSkill += crewMem.SkillLevel;
+            }
+            if (CrewSkill > BankSecurity)
+            {
+                Console.WriteLine("The Heist was a success! You made a clean getaway.");
+            }
+            else{
+                Console.WriteLine($"{HeistCrew[0].name} tripped the alarm! You were all arrested.")
+            }
         }
     }
 }
